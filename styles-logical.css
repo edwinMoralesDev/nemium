@@ -213,7 +213,7 @@ main-content {
 
 @media screen and (min-width: 1366px) {
     .hero {
-        block-size: 350;
+        block-size: 350px;
     }
     .header {
         position: sticky;
@@ -235,5 +235,8 @@ main-content {
     h1 {
         font-size: 60px;
         margin-block-start: 64px;
+    }
+    .form input {
+        border-radius: 4px;
     }
 }
