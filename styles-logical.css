@@ -25,18 +25,18 @@ p {
 
 .header {
     position: sticky;
-    top: 0;
+    inset-block-start: -45px;
 }
 header {
     position: absolute;
     font-size: 14px;
-    width: 188px;
+    inline-size: 188px;
     color: var(--white30);
-    top: 64px;
-    left: -232px;
+    inset-block-start: 65px;
+    inset-inline-start: -208px;
 }
 header li {
-    margin-bottom: 16px;
+    margin-block-end: 16px;
 }
 .header-content {
     position: relative;
@@ -128,6 +128,9 @@ pre {
     line-height: 24px;
     overflow: auto;
     border-radius: 8px;
+    border: 10px solid #5551ff;
+    box-shadow: -10px 10px 0 0 #abaaf6;
+    margin-block-end: 30px;
 }
 blockquote {
     font-size: 24px;
@@ -159,4 +162,33 @@ main-content {
 
 .main-content {
     padding-inline: 16px;
+}
+.slider-container {
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scroll-container: {
+       diplay: none
+    }
+}
+.video{
+
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: white;
+    border-radius: 50%;
 }
