@@ -24,17 +24,18 @@ p {
 }
 
 .header {
+    margin-block-start: 20px;
     position: sticky;
     inset-block-start: -45px;
 }
-header {
+/* header {
     position: absolute;
     font-size: 14px;
     inline-size: 188px;
     color: var(--white30);
     inset-block-start: 65px;
     inset-inline-start: -208px;
-}
+} */
 header li {
     margin-block-end: 16px;
 }
@@ -97,7 +98,7 @@ h3 {
 }
 .section-content {
     counter-reset: titleList;
-    margin-top: 164px;
+    margin-top: 64px;
 
 }
 .section-content:first-of-type {
@@ -111,7 +112,7 @@ h3 {
 .section-content h3::before {
     content: counter(titleList, decimal) '. ';
 }
-/* .section-content h3::after {
+.section-content h3::after {
     content: '';
     width: 80px;
     height: 4px;
@@ -120,7 +121,7 @@ h3 {
     position: absolute;
     left: 0;
     bottom: 0;
-} */
+}
 pre {
     background: var(--white10);
     padding: 40px;
@@ -169,9 +170,7 @@ main-content {
     overflow: auto;
     scroll-behavior: smooth;
     white-space: nowrap;
-    scroll-container: {
-       diplay: none
-    }
+    font-size: 0;
 }
 .video{
 
@@ -191,4 +190,35 @@ main-content {
     block-size: 15px;
     background: white;
     border-radius: 50%;
+}
+.form input {
+    width: 100%;
+    border: 1px solid var(--white30);
+    background: #251f24;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    box-sizing: border-box;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+.form input[type="submit"] {
+    background: #157efb;
+    border: none;
+}
+.form input::placeholder {
+    color: var(--white20);
+}
+
+@media screen and (min-width: 1366px) {
+    header {
+        position: absolute;
+        font-size: 14px;
+        inline-size: 188px;
+        color: var(--white30);
+        inset-block-start: 65px;
+        inset-inline-start: -208px;
+    }
 }
